@@ -71,6 +71,7 @@
     <Compile Include="Items\AgedBrie.cs" />
     <Compile Include="Items\BackstagePasses.cs" />
     <Compile Include="Items\Basic.cs" />
+    <Compile Include="Items\ConjuredManaCake.cs" />
     <Compile Include="Items\Sulfuras.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

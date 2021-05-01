@@ -14,6 +14,8 @@ namespace csharp
                     return new Sulfuras();
                 case GildedRoseItemCatalogue.BackstagePasses:
                     return new BackstagePasses(item);
+                case GildedRoseItemCatalogue.ConjuredManaCake:
+                    return new ConjuredManaCake(item);
                 default:
                     return new Basic(item);
             }

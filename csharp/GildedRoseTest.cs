@@ -112,6 +112,20 @@ namespace csharp
             Assert.AreEqual(0, item.Quality);
         }
 
+        [Test]
+        public void When_The_Type_Of_Item_Is_Conjured_Mana_Cake_Then_Quality_Value_Decreases_Twice_As_Fast_As_Normal_Item()
+        {
+            var item = ExecuteUpdateOnASingleItem("Conjured Mana Cake", 3, 6);
+            Assert.AreEqual(4, item.Quality);
+        }
+
+        [Test]
+        public void When_The_Type_Of_Item_Is_Conjured_Mana_Cake_And_Sell_By_Date_Has_Passed_Then_Quality_Value_Decreases_Twice_As_Fast_As_Normal_Item()
+        {
+            var item = ExecuteUpdateOnASingleItem("Conjured Mana Cake", 0, 20);
+            Assert.AreEqual(16, item.Quality);
+        }
+
         private Item ExecuteUpdateOnASingleItem(string itemName, int sellIn, int quality)
         {
             var item = new Item { Name = itemName, SellIn = sellIn, Quality = quality };
